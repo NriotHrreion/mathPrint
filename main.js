@@ -4,6 +4,7 @@ var num = 100;
 
 printBtn.onclick = function() {
     print();
+    reload();
 }
 
 var table = document.createElement("table");
