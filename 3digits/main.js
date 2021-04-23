@@ -1,11 +1,29 @@
 var main = document.getElementById("main");
 var printBtn = document.getElementById("print");
+var displayAns = document.getElementById("displayAns");
 var num = 1000;
+var ans = false;
 
 printBtn.onclick = function() {
     print();
     reload();
-}
+};
+
+displayAns.onchange = function() {
+    var elem = document.getElementsByClassName("answer");
+
+    if(ans) {
+        ans = false;
+        for(let i = 0; i < elem.length; i++) {
+            elem[i].style.display = "none";
+        }
+    } else {
+        ans = true;
+        for(let i = 0; i < elem.length; i++) {
+            elem[i].style.display = "block";
+        }
+    }
+};
 
 var table = document.createElement("table");
 table.className = "test";
@@ -13,8 +31,13 @@ table.className = "test";
 for(let i = 0; i < 20; i++) {
     var tr = document.createElement("tr");
     for(let j = 0; j < 5; j++) {
+        var data = getMath();
         var td = document.createElement("td");
-        td.innerHTML = getMath();
+        td.innerHTML = data.question;
+        var ansBlock = document.createElement("span");
+        ansBlock.innerHTML = data.answer;
+        ansBlock.className = "answer";
+        td.appendChild(ansBlock);
         tr.appendChild(td);
     }
     table.appendChild(tr);
@@ -31,12 +54,20 @@ function getMath() {
     var num1 = getRandom(1, num - 1);
     var num2 = sum - num1;
 
-    //return num1 +"+"+ num2 +"= ";
     if(num2 > 0) {
-        return num1 +"+"+ num2 +"= ";
+        return {
+            question: num1 +"+"+ num2 +"= ",
+            answer: sum
+        };
     } else if(num2 == 0) {
-        return num1 +"+"+ num2 +"= ";
+        return {
+            question: num1 +"+"+ num2 +"= ",
+            answer: sum
+        };
     } else {
-        return num1 +""+ num2 +"= ";
+        return {
+            question: num1 +""+ num2 +"= ",
+            answer: sum
+        };
     }
 }
