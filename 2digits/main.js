@@ -1,3 +1,4 @@
+var info = document.getElementById("info");
 var main = document.getElementById("main");
 var printBtn = document.getElementById("print");
 var displayAns = document.getElementById("displayAns");
@@ -5,7 +6,9 @@ var num = 100;
 var ans = false;
 
 printBtn.onclick = function() {
+    info.style.display = "none";
     print();
+    info.style.display = "block";
 };
 
 displayAns.onchange = function() {
@@ -19,7 +22,7 @@ displayAns.onchange = function() {
     } else {
         ans = true;
         for(let i = 0; i < elem.length; i++) {
-            elem[i].style.display = "block";
+            elem[i].style.display = "inline-block";
         }
     }
 };
