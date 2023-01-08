@@ -27,37 +27,20 @@ displayAns.onchange = function() {
     }
 };
 
-// for(let i = 0; i < 20; i++) {
-//     var tr = document.createElement("tr");
-//     for(let j = 0; j < 5; j++) {
-//         var data = getMath();
-//         var td = document.createElement("td");
-//         td.innerHTML = data.question;
-//         var ansBlock = document.createElement("span");
-//         ansBlock.innerHTML = data.answer;
-//         ansBlock.className = "answer";
-//         td.appendChild(ansBlock);
-//         tr.appendChild(td);
-//     }
-//     table.appendChild(tr);
-// }
 for(let i = 0; i < 4; i++) {
     var questionData = getMath();
 
-    var block = document.createElement("div");
-    block.className = "block";
+    var elem = document.getElementById(i.toString());
     
     var question = document.createElement("div");
     question.className = "question";
     question.innerText = questionData.question;
-    block.appendChild(question);
+    elem.appendChild(question);
 
     var answer = document.createElement("div");
     answer.className = "answer";
     answer.innerText = questionData.answer;
-    block.appendChild(answer);
-
-    main.appendChild(block);
+    elem.appendChild(answer);
 }
 
 function getRandom(min, max) {

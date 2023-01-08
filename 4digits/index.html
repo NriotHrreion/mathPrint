@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小学计算题出题器 (4位数乘法)</title>
     <style>
-        .main {
+        /* .main {
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: 50% 50%;
@@ -17,6 +17,28 @@
         .main .block .answer {
             font-weight: bold;
             display: none;
+        } */
+        table {
+            display: block;
+            width: 100%;
+        }
+        table tbody {
+            display: block;
+            width: 100%;
+        }
+        table tr {
+            display: inline-block;
+            margin-bottom: 390px;
+            width: 100%;
+        }
+        table td {
+            display: inline-block;
+            width: 49%;
+            text-align: center;
+        }
+        .answer {
+            display: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -27,7 +49,20 @@
         <button id="print">打印</button> <input type="checkbox" id="displayAns">显示答案(订正用)
     </div>
     <br>
-    <div id="main" class="main"></div>
+    <div id="main" class="main">
+        <table>
+            <tbody>
+                <tr>
+                    <td id="0"></td>
+                    <td id="1"></td>
+                </tr>
+                <tr>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
