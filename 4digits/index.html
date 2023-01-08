@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学计算题出题器 (4位数乘法)</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            height: 900px;
+        }
+        .main .block {
+            text-align: center;
+        }
+        .main .block .answer {
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h2>打印后会继续出题</h2>
+        <br>
+        <button id="print">打印</button> <input type="checkbox" id="displayAns">显示答案(订正用)
+    </div>
+    <br>
+    <div id="main" class="main"></div>
+    <script src="./main.js"></script>
+</body>
+</html>
