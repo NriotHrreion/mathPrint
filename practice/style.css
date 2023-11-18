@@ -1,0 +1,42 @@
+.main {
+    width: 900px;
+    margin: 0 auto;
+    padding: 50px 40px;
+}
+
+.main h1 {
+    text-align: center;
+}
+
+.header {
+    font-size: 13pt;
+    text-align: center;
+}
+
+.part-a {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+.part-b {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 330px);
+}
+
+.part-c {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 280px;
+}
+
+.part-d {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, 240px);
+}
+
+.answer {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+}

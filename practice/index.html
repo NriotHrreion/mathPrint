@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学计算题出题器 (练习题集)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="info">
+        <h2>刷新页面可继续出题</h2>
+        <br>
+        <button id="print">打印</button>
+    </div>
+    <br>
+    <div id="main" class="main">
+        <h1>计算练习</h1>
+
+        <p class="header">班级: __________ 姓名: __________ 号数: __________ 成绩: __________</p>
+
+        <h3>一、口算</h3>
+        <div class="part-a" id="part-a"></div>
+
+        <h3>二、竖式计算</h3>
+        <div class="part-b" id="part-b"></div>
+        <p>（以下4题结果保留两位小数）</p>
+        <div class="part-c" id="part-c"></div>
+
+        <h3>三、脱式计算</h3>
+        <div class="part-d" id="part-d"></div>
+
+        <div id="answer-container">
+            <h2>答案</h2>
+            <div class="answer" id="answer"></div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
