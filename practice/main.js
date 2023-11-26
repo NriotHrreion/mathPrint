@@ -115,8 +115,8 @@ for(let i = 0; i < 50; i++) {
         var isMul = getBoolRandom();
 
         if(isMul) {
-            a = getFloatRandom(0, 100, 1);
-            b = getFloatRandom(0, 100, 1);
+            a = getRandom(0, 10, 1);
+            b = getRandom(0, 100, 1);
             answerList.push(safeMultiply(a, b));
             formulaStr = a +"×"+ b;
         } else {
