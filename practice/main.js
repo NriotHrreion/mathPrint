@@ -165,12 +165,12 @@ for(let i = 0; i < 12; i++) {
     var isMul = getBoolRandom();
     if(isMul) {
         a = getFloatRandom(0, 100);
-        b = getFloatRandom(0, 100);
+        b = getRandom(0, 100);
         answerList.push(safeMultiply(a, b));
         formulaStr = a +"×"+ b;
     } else {
-        a = getFloatRandom(0, 10, 1);
-        b = getFloatRandom(0, 10, 1);
+        a = getFloatRandom(0, 100, 1);
+        b = getRandom(1, 10);
         c = safeMultiply(a, b);
         answerList.push(parseFloat(a));
         formulaStr = c +"÷"+ b;
@@ -191,15 +191,14 @@ for(let i = 0; i < 4; i++) {
     var isMul = getBoolRandom();
     if(isMul) {
         a = getFloatRandom(0, 100);
-        b = getFloatRandom(0, 100);
+        b = getRandom(0, 100);
         answerList.push(safeMultiply(a, b));
         formulaStr = a +"×"+ b;
     } else {
         a = getFloatRandom(0, 10);
-        b = getFloatRandom(0, 10);
-        c = safeMultiply(a, b);
+        b = getRandom(1, 10);
         answerList.push(parseFloat(a));
-        formulaStr = c +"÷"+ b;
+        formulaStr = a +"÷"+ b;
     }
 
     formula.innerText = formulaStr +"=";
@@ -217,11 +216,11 @@ function basicGenerator() {
         
         if(isMul) {
             a = getFloatRandom(0, 100, 1);
-            b = getFloatRandom(0, 100, 1);
+            b = getRandom(0, 10);
             return [a +"×"+ b, safeMultiply(a, b)];
         } else {
             a = getFloatRandom(0, 10, 1);
-            b = getFloatRandom(0, 10, 1);
+            b = getRandom(1, 10);
             c = safeMultiply(a, b);
             return [c +"÷"+ b, parseFloat(a)];
         }
@@ -245,7 +244,7 @@ function assemblingGenerator(currentAnswer) {
     var a;
 
     if(isMul) {
-        a = getFloatRandom(0, 100, 1);
+        a = getRandom(0, 10);
         return ["×"+ a, safeMultiply(currentAnswer, a)];
     } else {
         var isAdd = getBoolRandom();
